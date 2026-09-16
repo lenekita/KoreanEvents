@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10202a">
+  <meta name="description" content="Une invitation privée pour une nuit coréenne d'exception.">
+  <title>Nuit de Séoul — Invitation privée</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root{--night:#0c1921;--deep:#132832;--cream:#f3eee4;--paper:#e7dfd1;--gold:#cb9c58;--mist:#b8c8c9;--line:rgba(243,238,228,.18);--shadow:0 30px 80px rgba(0,0,0,.32)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--night);color:var(--cream);font-family:"DM Sans",sans-serif}button,input{font:inherit}a{color:inherit}
+    .hero{min-height:100svh;position:relative;display:grid;align-items:end;overflow:hidden;background:#0f212b url('assets/seoul-hero.png') center/cover no-repeat}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,14,19,.88) 0%,rgba(5,14,19,.56) 38%,rgba(5,14,19,.08) 73%),linear-gradient(0deg,rgba(5,14,19,.9) 0%,transparent 46%)}
+    .nav{position:absolute;z-index:2;left:clamp(22px,5vw,74px);right:clamp(22px,5vw,74px);top:28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px;text-transform:uppercase;letter-spacing:.18em;font-size:11px}
+    .brand{font-weight:600}.edition{color:var(--paper)}
+    .hero-copy{position:relative;z-index:1;width:min(760px,88vw);margin:0 0 clamp(55px,10vh,110px) clamp(22px,7vw,110px)}
+    .eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.22em;font-size:11px;color:var(--paper);margin-bottom:24px}.eyebrow:before{content:"";width:38px;height:1px;background:var(--gold)}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(53px,9vw,120px);font-weight:500;line-height:.88;letter-spacing:-.045em;margin:0 0 28px}h1 em{color:var(--gold);font-weight:500}
+    .hero-copy p{font-family:"Manrope",sans-serif;font-size:clamp(17px,2vw,22px);line-height:1.55;max-width:650px;color:#eee7db;margin:0 0 34px}
+    .btn{border:1px solid var(--gold);background:var(--gold);color:#10202a;padding:15px 23px;border-radius:999px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:10px;text-decoration:none;transition:.25s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.secondary{background:transparent;color:var(--cream);border-color:var(--line)}
+    .intro{padding:110px clamp(22px,7vw,110px);background:var(--cream);color:var(--night)}
+    .intro-grid{max-width:1240px;margin:auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw}.kicker{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:#6d745f;margin-top:10px}.intro h2,.form-wrap h2{font:500 clamp(38px,5vw,68px)/1.05 "Playfair Display",serif;margin:0}.intro-lead{font:400 clamp(18px,2.1vw,26px)/1.55 "Manrope",sans-serif;margin:6px 0 55px;color:#33434a}
+    .experiences{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #c9c0b0}.experience{padding:34px 30px 34px 0;border-bottom:1px solid #c9c0b0}.experience:nth-child(even){padding-left:30px;border-left:1px solid #c9c0b0}.num{font-size:11px;letter-spacing:.15em;color:#818575}.experience h3{font:500 26px/1.2 "Playfair Display",serif;margin:16px 0 12px}.experience p{font:400 15px/1.7 "Manrope",sans-serif;color:#526067;margin:0}
+    .quote{padding:100px 24px;text-align:center;background:var(--deep);position:relative;overflow:hidden}.quote:after{content:"PYRÉNÉES";position:absolute;left:50%;bottom:-.24em;transform:translateX(-50%);font:500 clamp(70px,17vw,230px)/1 "Playfair Display",serif;color:rgba(255,255,255,.025);white-space:nowrap}.quote blockquote{position:relative;z-index:1;margin:0 auto;max-width:900px;font:italic 500 clamp(29px,4.2vw,58px)/1.25 "Playfair Display",serif}.quote small{display:block;margin-top:25px;color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:10px}
+    .apply{padding:110px 22px;background:#0a171e}.form-wrap{max-width:780px;margin:auto;text-align:center}.form-wrap>p{color:var(--mist);line-height:1.7;max-width:590px;margin:22px auto 40px}.card{background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:24px;padding:clamp(25px,5vw,52px);box-shadow:var(--shadow);text-align:left}.field label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;color:var(--paper)}.field input{width:100%;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.2);border-radius:12px;padding:16px 17px;color:white;outline:none}.field input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(203,156,88,.12)}.fine{font-size:12px;line-height:1.55;color:#94a4a7;margin:14px 0 24px}.card .btn{width:100%;justify-content:center}
+    .modal{position:fixed;z-index:10;inset:0;background:rgba(2,8,11,.82);backdrop-filter:blur(12px);display:none;place-items:center;padding:20px}.modal.open{display:grid}.dialog{width:min(640px,100%);max-height:92vh;overflow:auto;background:#10222b;border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:clamp(25px,5vw,48px);box-shadow:var(--shadow)}.steps{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold)}.dialog h2{font:500 clamp(32px,6vw,52px)/1.05 "Playfair Display",serif;margin:16px 0}.dialog p{line-height:1.65;color:#c9d3d1}.location-note{border-left:2px solid var(--gold);padding-left:17px;margin:25px 0}.actions{display:flex;gap:12px;flex-wrap:wrap}.actions .btn{justify-content:center;flex:1;min-width:190px}.status{display:none;margin-top:22px;padding:16px;border-radius:12px;background:rgba(0,0,0,.2);font-size:13px;color:#c8d2d0}.status.show{display:block}.reveal{text-align:center}.reveal .mountain{font-size:54px;margin:8px 0}.confirmation{margin:25px 0;background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:16px;padding:22px}.confirmation strong{display:block;color:var(--cream);margin-bottom:8px}.confirmation p{margin:0}.email-confirm{color:var(--gold)}
+    .quote:after{content:"SEOUL"}
+    footer{padding:35px 22px;text-align:center;background:#071116;color:#788b90;font-size:11px;letter-spacing:.08em}
+    @media(max-width:720px){.nav .edition{display:none}.hero{min-height:780px;background-position:62% center}.hero:before{background:linear-gradient(0deg,rgba(5,14,19,.94) 0%,rgba(5,14,19,.55) 62%,rgba(5,14,19,.12))}.hero-copy{margin-left:22px}.intro{padding-top:80px}.intro-grid{grid-template-columns:1fr}.experiences{grid-template-columns:1fr}.experience:nth-child(even){padding-left:0;border-left:0}.actions{flex-direction:column}.actions .btn{width:100%}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="nav"><div class="brand">Nuit de Séoul</div><div class="edition">Invitation privée · Édition 2027</div></div>
+    <div class="hero-copy">
+      <div class="eyebrow">Paris · Adresse confidentielle</div>
+      <h1>Une nuit.<br><em>À Séoul.</em></h1>
+      <p>Une soirée coréenne confidentielle entre saveurs, musique et rituels contemporains. Une table, quelques invités, une autre façon de voyager.</p>
+      <a class="btn" href="#candidature">Découvrir l’invitation <span>↓</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="intro-grid">
+        <div class="kicker">Le programme</div>
+        <div>
+          <h2>Séoul, le temps d’une soirée.</h2>
+          <p class="intro-lead">Une expérience pensée comme un passage : de la table coréenne aux lumières de la nuit, chaque moment révèle une facette différente de la ville.</p>
+          <div class="experiences">
+            <article class="experience"><span class="num">01 — TABLE</span><h3>Les saveurs de Corée</h3><p>Une dégustation généreuse de plats à partager, entre recettes emblématiques, banchan et créations contemporaines.</p></article>
+            <article class="experience"><span class="num">02 — RITUEL</span><h3>Le verre de bienvenue</h3><p>Découvrir les codes du service coréen autour d’un cocktail au yuja et d’une sélection de boissons traditionnelles.</p></article>
+            <article class="experience"><span class="num">03 — MUSIQUE</span><h3>Le rythme de Séoul</h3><p>Une sélection musicale traverse la soirée, de la soul coréenne aux sonorités électroniques de la capitale.</p></article>
+            <article class="experience"><span class="num">04 — NORAEBANG</span><h3>La nuit change de ton</h3><p>Quand la table se termine, place à un salon privé et au plaisir très séoulite de chanter ensemble.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote"><blockquote>« Certains voyages commencent simplement autour d’une table. »</blockquote><small>Une nuit à goûter, écouter et partager</small></section>
+
+    <section class="apply" id="candidature">
+      <div class="form-wrap">
+        <div class="eyebrow" style="justify-content:center">Invitation privée</div>
+        <h2>Confirmer votre invitation</h2>
+        <p>La soirée est organisée en petit comité. Indiquez votre adresse e-mail pour vérifier la disponibilité de votre invitation.</p>
+        <form class="card" id="formulaire">
+          <div class="field"><label for="email">Votre adresse e-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="prenom@exemple.fr" required></div>
+          <p class="fine">Votre adresse reste uniquement dans cette page et n’est enregistrée sur aucun serveur.</p>
+          <button class="btn" type="submit">Confirmer ma présence</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+    <div class="dialog" id="dialog-location">
+      <div class="steps">Étape 2 sur 2</div>
+      <h2 id="dialog-title">Vérifier votre zone d’accès</h2>
+      <p>Pour vous proposer l’itinéraire le plus simple jusqu’au lieu de la soirée, vous pouvez autoriser votre navigateur à connaître votre position actuelle.</p>
+      <div class="location-note"><strong>Vous gardez le contrôle.</strong><p>Votre navigateur vous demandera l’autorisation. La position est utilisée uniquement pendant cette étape : elle n’est ni envoyée, ni enregistrée.</p></div>
+      <div class="actions"><button class="btn" id="locate">Autoriser ma position</button><button class="btn secondary" id="skip">Continuer sans localisation</button></div>
+      <div class="status" id="status">Recherche de votre position…</div>
+    </div>
+    <div class="dialog reveal" id="dialog-reveal" hidden>
+      <div class="steps">Invitation confirmée</div><div class="mountain">🏮</div>
+      <h2>Votre place est réservée.</h2>
+      <p>Votre confirmation pour la Nuit de Séoul a bien été prise en compte.</p>
+      <div class="confirmation"><strong>Prochaine étape</strong><p>Nous vous enverrons très prochainement les informations nécessaires par e-mail à l’adresse <span class="email-confirm" id="show-email"></span>.</p></div>
+      <p>Vous recevrez l’adresse confidentielle, l’horaire exact, le dress code et les informations pratiques de la soirée.</p>
+      <button class="btn" id="close">Retourner au site</button>
+    </div>
+  </div>
+
+  <footer>Invitation fictive créée pour une surprise privée · Aucune donnée collectée</footer>
+  <script>
+    const form=document.querySelector('#formulaire'),modal=document.querySelector('#modal'),locationDialog=document.querySelector('#dialog-location'),revealDialog=document.querySelector('#dialog-reveal'),statusBox=document.querySelector('#status');let email='';
+    form.addEventListener('submit',e=>{e.preventDefault();email=document.querySelector('#email').value.trim();if(!form.checkValidity()){form.reportValidity();return}modal.classList.add('open');document.body.style.overflow='hidden'});
+    function reveal(){document.querySelector('#show-email').textContent=email;locationDialog.hidden=true;revealDialog.hidden=false}
+    document.querySelector('#skip').addEventListener('click',()=>reveal());
+    document.querySelector('#locate').addEventListener('click',()=>{statusBox.classList.add('show');statusBox.textContent='Recherche de votre position…';if(!navigator.geolocation){reveal();return}navigator.geolocation.getCurrentPosition(()=>reveal(),()=>{statusBox.textContent='Autorisation refusée ou position indisponible. Vous pouvez continuer sans localisation.'},{enableHighAccuracy:false,timeout:10000,maximumAge:300000})});
+    document.querySelector('#close').addEventListener('click',()=>{modal.classList.remove('open');document.body.style.overflow='';locationDialog.hidden=false;revealDialog.hidden=true;statusBox.classList.remove('show');document.querySelector('#candidature').scrollIntoView()});
+  </script>
+</body>
+</html>
